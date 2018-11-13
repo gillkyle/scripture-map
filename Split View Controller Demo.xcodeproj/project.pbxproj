@@ -19,6 +19,7 @@
 		27A2D2DC2191F3520040FC7D /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2D2DB2191F3520040FC7D /* BooksViewController.swift */; };
 		27DAE7F421948D9700A4A2B8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DAE7F321948D9700A4A2B8 /* WebKit.framework */; };
 		27DAE7F621948E3500A4A2B8 /* ScripturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DAE7F521948E3500A4A2B8 /* ScripturesViewController.swift */; };
+		27F41901219A846300518CD2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F41900219A846300518CD2 /* MapViewController.swift */; };
 		3F3ED1E8218B6AE100906AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ED1E7218B6AE100906AF4 /* AppDelegate.swift */; };
 		3F3ED1ED218B6AE100906AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ED1EB218B6AE100906AF4 /* Main.storyboard */; };
 		3F3ED1EF218B6AE200906AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ED1EE218B6AE200906AF4 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		27A2D2DB2191F3520040FC7D /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
 		27DAE7F321948D9700A4A2B8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		27DAE7F521948E3500A4A2B8 /* ScripturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScripturesViewController.swift; sourceTree = "<group>"; };
+		27F41900219A846300518CD2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3F3ED1E4218B6AE000906AF4 /* Split View Controller Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split View Controller Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3ED1E7218B6AE100906AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F3ED1EC218B6AE100906AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				3F3ED1FB218B6C3900906AF4 /* DetailViewController.swift */,
 				3F3ED1F9218B6B4000906AF4 /* VolumesViewController.swift */,
 				27DAE7F521948E3500A4A2B8 /* ScripturesViewController.swift */,
+				27F41900219A846300518CD2 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -100,10 +103,9 @@
 		27A2D2D82191EEE50040FC7D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				27A2D2C92191EE310040FC7D /* Book.swift */,
+				27F418FF219A820D00518CD2 /* Table */,
 				27A2D2CB2191EE310040FC7D /* GeoDatabase.swift */,
-				27A2D2C62191EE300040FC7D /* GeoPlace.swift */,
-				27A2D2C72191EE300040FC7D /* Scripture.swift */,
+				27A2D2CC2191EE310040FC7D /* ScriptureRenderer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,9 +124,18 @@
 			isa = PBXGroup;
 			children = (
 				27A2D2C52191EE300040FC7D /* String+Extensions.swift */,
-				27A2D2CC2191EE310040FC7D /* ScriptureRenderer.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		27F418FF219A820D00518CD2 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				27A2D2C92191EE310040FC7D /* Book.swift */,
+				27A2D2C62191EE300040FC7D /* GeoPlace.swift */,
+				27A2D2C72191EE300040FC7D /* Scripture.swift */,
+			);
+			path = Table;
 			sourceTree = "<group>";
 		};
 		3F3ED1DB218B6AE000906AF4 = {
@@ -298,6 +309,7 @@
 				27A2D2D52191EE310040FC7D /* ScriptureRenderer.swift in Sources */,
 				3F3ED1FC218B6C3900906AF4 /* DetailViewController.swift in Sources */,
 				27A2D2DC2191F3520040FC7D /* BooksViewController.swift in Sources */,
+				27F41901219A846300518CD2 /* MapViewController.swift in Sources */,
 				27A2D2D42191EE310040FC7D /* GeoDatabase.swift in Sources */,
 				3F3ED1FA218B6B4000906AF4 /* VolumesViewController.swift in Sources */,
 				3F3ED1E8218B6AE100906AF4 /* AppDelegate.swift in Sources */,

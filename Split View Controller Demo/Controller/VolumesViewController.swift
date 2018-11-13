@@ -22,6 +22,7 @@ class VolumesViewController : UITableViewController {
             if let booksVC = segue.destination as? BooksViewController {
                 if let indexPath = sender as? IndexPath {
                     booksVC.volume = volumes[indexPath.row]
+                    // also sets the books in booksviewcontroller with didset property initializer
                     booksVC.volumeId = indexPath.row + 1
                 }
             }
