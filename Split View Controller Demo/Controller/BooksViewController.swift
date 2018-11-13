@@ -9,12 +9,13 @@
 import UIKit
 
 class BooksViewController : UITableViewController {
-
+    // MARK - Constants
     private struct Storyboard {
         static let BookCellIdentifier = "BookCell"
         static let ShowScripturesSegueIdentifier = "ShowChapterContent"
     }
     
+    // MARK - Properties
     var books = [Book]()
     var volume = ""
     var volumeId = 1
@@ -44,7 +45,7 @@ class BooksViewController : UITableViewController {
         performSegue(withIdentifier: Storyboard.ShowScripturesSegueIdentifier, sender: self)
     }
     
-    //MARK - Helpers
+    // MARK - Helpers
     private func updateModel() {
         title = volume
         books = GeoDatabase.sharedGeoDatabase.booksForParentId(volumeId)

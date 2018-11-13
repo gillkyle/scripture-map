@@ -18,8 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bjq-Iw-hvl">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satelliteFlyover" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bjq-Iw-hvl">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vUC-kS-KYs" id="rB0-JO-jtS"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,6 +35,9 @@
                         <viewLayoutGuide key="safeArea" id="4tg-jX-KWt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="kmp-nm-NBe"/>
+                    <connections>
+                        <outlet property="mapView" destination="bjq-Iw-hvl" id="KYf-Oh-yEX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayU-UJ-Jbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,12 +9,13 @@
 import UIKit
 
 class VolumesViewController : UITableViewController {
-
+    // MARK - Constants
     private struct Storyboard {
         static let VolumeCellIdentifier = "VolumeCell"
         static let ShowBooksSegue = "ShowBooks"
     }
 
+    // MARK - Properties
     var volumes = GeoDatabase.sharedGeoDatabase.volumes()
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -29,6 +30,7 @@ class VolumesViewController : UITableViewController {
         }
     }
 
+    // MARK - Table View data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return volumes.count
     }
@@ -41,6 +43,7 @@ class VolumesViewController : UITableViewController {
         return cell
     }
 
+    // MARK - Table View delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Storyboard.ShowBooksSegue, sender: indexPath)
     }
