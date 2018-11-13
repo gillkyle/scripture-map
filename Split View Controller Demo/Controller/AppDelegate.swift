@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     private struct Storyboard {
         static let MainStoryboardName = "Main"
-        static let DetailVCIdentifier = "DetailVC"
+        static let MapVCIdentifier = "DetailVC"
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -34,16 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func splitViewController(_ splitViewController: UISplitViewController, separateSecondaryFrom primaryViewController: UIViewController) -> UIViewController? {
         if let navVC = primaryViewController as? UINavigationController {
             for controller in navVC.viewControllers {
-                if controller.restorationIdentifier == Storyboard.DetailVCIdentifier {
+                if controller.restorationIdentifier == Storyboard.MapVCIdentifier {
                     return controller
                 }
             }
         }
         
         let storyboard = UIStoryboard(name: Storyboard.MainStoryboardName, bundle: nil)
-        let detailView = storyboard.instantiateViewController(withIdentifier: Storyboard.DetailVCIdentifier)
-        
-        return detailView
+        return storyboard.instantiateViewController(withIdentifier: Storyboard.MapVCIdentifier)
     }
 }
 

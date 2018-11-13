@@ -17,19 +17,15 @@ class BooksViewController : UITableViewController {
     
     var books = [Book]()
     var volume = ""
-    var volumeId = 1 {
-        didSet {
-            books = GeoDatabase.sharedGeoDatabase.booksForParentId(volumeId)
-        }
-    }
+    var volumeId = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = volume
-    }
+        updateModel()
+   }
     
-    // MARK: - Table View data source
+    // MARK - Table View data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) ->
         Int {
             return books.count
@@ -46,5 +42,11 @@ class BooksViewController : UITableViewController {
     // MARK - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: Storyboard.ShowScripturesSegueIdentifier, sender: self)
+    }
+    
+    //MARK - Helpers
+    private func updateModel() {
+        title = volume
+        books = GeoDatabase.sharedGeoDatabase.booksForParentId(volumeId)
     }
 }

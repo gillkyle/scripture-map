@@ -10,20 +10,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Scriptures View Controller-->
+        <!--Map-->
         <scene sceneID="SWP-5L-hEX">
             <objects>
-                <viewController id="vUC-kS-KYs" customClass="ScripturesViewController" customModule="Split_View_Controller_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vUC-kS-KYs" customClass="MapViewController" customModule="Split_View_Controller_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rs2-1q-ldd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bjq-Iw-hvl">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4tg-jX-KWt" firstAttribute="trailing" secondItem="bjq-Iw-hvl" secondAttribute="trailing" id="FSB-Vg-1L2"/>
+                            <constraint firstItem="bjq-Iw-hvl" firstAttribute="leading" secondItem="4tg-jX-KWt" secondAttribute="leading" id="Kct-Mj-QeE"/>
+                            <constraint firstItem="bjq-Iw-hvl" firstAttribute="top" secondItem="4tg-jX-KWt" secondAttribute="top" id="kYY-KX-ljf"/>
+                            <constraint firstItem="4tg-jX-KWt" firstAttribute="bottom" secondItem="bjq-Iw-hvl" secondAttribute="bottom" id="zxL-sw-o8v"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4tg-jX-KWt"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Map" id="kmp-nm-NBe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ayU-UJ-Jbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2482" y="1409"/>
+            <point key="canvasLocation" x="2481" y="1407"/>
         </scene>
         <!--The Scriptures-->
         <scene sceneID="lta-7H-dkJ">
@@ -213,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="-594" y="3"/>
         </scene>
-        <!--Detail VC-->
+        <!--DetailVC-->
         <scene sceneID="0mf-nY-jNR">
             <objects>
-                <navigationController storyboardIdentifier="DetailVC" title="Detail VC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KMg-Lj-LbZ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DetailVC" title="DetailVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KMg-Lj-LbZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3nV-gR-hsO">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -224,7 +236,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vUC-kS-KYs" kind="show" id="sGJ-gk-LhF"/>
+                        <segue destination="vUC-kS-KYs" kind="relationship" relationship="rootViewController" id="4VQ-ez-Ude"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9m-FK-Ze8" userLabel="First Responder" sceneMemberID="firstResponder"/>

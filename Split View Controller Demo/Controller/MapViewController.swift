@@ -6,4 +6,16 @@
 //  Copyright © 2018 IS 543. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MapViewController : UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let splitVC = splitViewController {
+            navigationItem.leftItemsSupplementBackButton = true
+            navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem
+        }
+    }
+}
