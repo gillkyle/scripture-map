@@ -26,6 +26,16 @@ class BooksViewController : UITableViewController {
         updateModel()
    }
     
+    // MARK - Segues
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let scripVC = segue.destination as? ScripturesViewController {
+            if let indexPath = sender as? IndexPath {
+                scripVC.bookId = books[indexPath.row].id
+                scripVC.chapter = 7
+            }
+        }
+    }
+    
     // MARK - Table View data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) ->
         Int {
@@ -42,7 +52,7 @@ class BooksViewController : UITableViewController {
     
     // MARK - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: Storyboard.ShowScripturesSegueIdentifier, sender: self)
+        performSegue(withIdentifier: Storyboard.ShowScripturesSegueIdentifier, sender: indexPath)
     }
     
     // MARK - Helpers

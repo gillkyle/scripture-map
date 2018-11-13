@@ -50,6 +50,7 @@ class MapViewController : UIViewController {
         let viewRegion = MKCoordinateRegion(center: center, span: span)
         
         mapView.setRegion(viewRegion, animated: true)
+        mapView.showAnnotations(mapView.annotations, animated: true)
     }
     
     // MARK - Map View Delegate
