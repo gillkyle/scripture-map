@@ -7,21 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27A2D2CD2191EE310040FC7D /* geocode.js in Resources */ = {isa = PBXBuildFile; fileRef = 27A2D2C42191EE300040FC7D /* geocode.js */; };
+		27A2D2CE2191EE310040FC7D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2D2C52191EE300040FC7D /* String+Extensions.swift */; };
+		27A2D2CF2191EE310040FC7D /* GeoPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2D2C62191EE300040FC7D /* GeoPlace.swift */; };
+		27A2D2D02191EE310040FC7D /* Scripture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2D2C72191EE300040FC7D /* Scripture.swift */; };
+		27A2D2D12191EE310040FC7D /* geo.21.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 27A2D2C82191EE300040FC7D /* geo.21.sqlite */; };
+		27A2D2D22191EE310040FC7D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2D2C92191EE310040FC7D /* Book.swift */; };
+		27A2D2D32191EE310040FC7D /* scripture.css in Resources */ = {isa = PBXBuildFile; fileRef = 27A2D2CA2191EE310040FC7D /* scripture.css */; };
+		27A2D2D42191EE310040FC7D /* GeoDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2D2CB2191EE310040FC7D /* GeoDatabase.swift */; };
+		27A2D2D52191EE310040FC7D /* ScriptureRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2D2CC2191EE310040FC7D /* ScriptureRenderer.swift */; };
+		27A2D2DC2191F3520040FC7D /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2D2DB2191F3520040FC7D /* BooksViewController.swift */; };
+		27DAE7F421948D9700A4A2B8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27DAE7F321948D9700A4A2B8 /* WebKit.framework */; };
+		27DAE7F621948E3500A4A2B8 /* ScripturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DAE7F521948E3500A4A2B8 /* ScripturesViewController.swift */; };
 		3F3ED1E8218B6AE100906AF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ED1E7218B6AE100906AF4 /* AppDelegate.swift */; };
-		3F3ED1EA218B6AE100906AF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ED1E9218B6AE100906AF4 /* ViewController.swift */; };
 		3F3ED1ED218B6AE100906AF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ED1EB218B6AE100906AF4 /* Main.storyboard */; };
 		3F3ED1EF218B6AE200906AF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ED1EE218B6AE200906AF4 /* Assets.xcassets */; };
 		3F3ED1F2218B6AE200906AF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3ED1F0218B6AE200906AF4 /* LaunchScreen.storyboard */; };
+		3F3ED1FA218B6B4000906AF4 /* VolumesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ED1F9218B6B4000906AF4 /* VolumesViewController.swift */; };
+		3F3ED1FC218B6C3900906AF4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3ED1FB218B6C3900906AF4 /* DetailViewController.swift */; };
+		D03F6A3C1762E42E9A37595D /* Pods_Split_View_Controller_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6E6955FDDEB55CC5AC7B14 /* Pods_Split_View_Controller_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		109616A68AEFB242C87C00BD /* Pods-Split View Controller Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Split View Controller Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Split View Controller Demo/Pods-Split View Controller Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		1B2525810422E11AD6880F68 /* Pods-Split View Controller Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Split View Controller Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Split View Controller Demo/Pods-Split View Controller Demo.release.xcconfig"; sourceTree = "<group>"; };
+		1E6E6955FDDEB55CC5AC7B14 /* Pods_Split_View_Controller_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Split_View_Controller_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27A2D2C42191EE300040FC7D /* geocode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = geocode.js; sourceTree = "<group>"; };
+		27A2D2C52191EE300040FC7D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		27A2D2C62191EE300040FC7D /* GeoPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoPlace.swift; sourceTree = "<group>"; };
+		27A2D2C72191EE300040FC7D /* Scripture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scripture.swift; sourceTree = "<group>"; };
+		27A2D2C82191EE300040FC7D /* geo.21.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = geo.21.sqlite; sourceTree = "<group>"; };
+		27A2D2C92191EE310040FC7D /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		27A2D2CA2191EE310040FC7D /* scripture.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = scripture.css; sourceTree = "<group>"; };
+		27A2D2CB2191EE310040FC7D /* GeoDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoDatabase.swift; sourceTree = "<group>"; };
+		27A2D2CC2191EE310040FC7D /* ScriptureRenderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptureRenderer.swift; sourceTree = "<group>"; };
+		27A2D2DB2191F3520040FC7D /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		27DAE7F321948D9700A4A2B8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		27DAE7F521948E3500A4A2B8 /* ScripturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScripturesViewController.swift; sourceTree = "<group>"; };
 		3F3ED1E4218B6AE000906AF4 /* Split View Controller Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Split View Controller Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3ED1E7218B6AE100906AF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3F3ED1E9218B6AE100906AF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F3ED1EC218B6AE100906AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F3ED1EE218B6AE200906AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F3ED1F1218B6AE200906AF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F3ED1F3218B6AE200906AF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3ED1F9218B6B4000906AF4 /* VolumesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumesViewController.swift; sourceTree = "<group>"; };
+		3F3ED1FB218B6C3900906AF4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +59,81 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27DAE7F421948D9700A4A2B8 /* WebKit.framework in Frameworks */,
+				D03F6A3C1762E42E9A37595D /* Pods_Split_View_Controller_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AC4DEF397B5EF5537D0DDB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				109616A68AEFB242C87C00BD /* Pods-Split View Controller Demo.debug.xcconfig */,
+				1B2525810422E11AD6880F68 /* Pods-Split View Controller Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		27A2D2D62191EED10040FC7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F3ED1E7218B6AE100906AF4 /* AppDelegate.swift */,
+				27A2D2DB2191F3520040FC7D /* BooksViewController.swift */,
+				3F3ED1FB218B6C3900906AF4 /* DetailViewController.swift */,
+				3F3ED1F9218B6B4000906AF4 /* VolumesViewController.swift */,
+				27DAE7F521948E3500A4A2B8 /* ScripturesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		27A2D2D72191EEE00040FC7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F3ED1EB218B6AE100906AF4 /* Main.storyboard */,
+				3F3ED1F0218B6AE200906AF4 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27A2D2D82191EEE50040FC7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27A2D2C92191EE310040FC7D /* Book.swift */,
+				27A2D2CB2191EE310040FC7D /* GeoDatabase.swift */,
+				27A2D2C62191EE300040FC7D /* GeoPlace.swift */,
+				27A2D2C72191EE300040FC7D /* Scripture.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27A2D2D92191EF7B0040FC7D /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				27A2D2C82191EE300040FC7D /* geo.21.sqlite */,
+				27A2D2C42191EE300040FC7D /* geocode.js */,
+				27A2D2CA2191EE310040FC7D /* scripture.css */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		27A2D2DA2191EFC00040FC7D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				27A2D2C52191EE300040FC7D /* String+Extensions.swift */,
+				27A2D2CC2191EE310040FC7D /* ScriptureRenderer.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		3F3ED1DB218B6AE000906AF4 = {
 			isa = PBXGroup;
 			children = (
 				3F3ED1E6218B6AE000906AF4 /* Split View Controller Demo */,
 				3F3ED1E5218B6AE000906AF4 /* Products */,
+				1AC4DEF397B5EF5537D0DDB0 /* Pods */,
+				ECBAEFDD348669F69D7B427D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +148,24 @@
 		3F3ED1E6218B6AE000906AF4 /* Split View Controller Demo */ = {
 			isa = PBXGroup;
 			children = (
-				3F3ED1E7218B6AE100906AF4 /* AppDelegate.swift */,
-				3F3ED1E9218B6AE100906AF4 /* ViewController.swift */,
-				3F3ED1EB218B6AE100906AF4 /* Main.storyboard */,
+				27A2D2D92191EF7B0040FC7D /* Assets */,
+				27A2D2D82191EEE50040FC7D /* Model */,
+				27A2D2D72191EEE00040FC7D /* View */,
+				27A2D2D62191EED10040FC7D /* Controller */,
+				27A2D2DA2191EFC00040FC7D /* Utilities */,
 				3F3ED1EE218B6AE200906AF4 /* Assets.xcassets */,
-				3F3ED1F0218B6AE200906AF4 /* LaunchScreen.storyboard */,
 				3F3ED1F3218B6AE200906AF4 /* Info.plist */,
 			);
 			path = "Split View Controller Demo";
+			sourceTree = "<group>";
+		};
+		ECBAEFDD348669F69D7B427D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27DAE7F321948D9700A4A2B8 /* WebKit.framework */,
+				1E6E6955FDDEB55CC5AC7B14 /* Pods_Split_View_Controller_Demo.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F3ED1F6218B6AE200906AF4 /* Build configuration list for PBXNativeTarget "Split View Controller Demo" */;
 			buildPhases = (
+				A0CC8D4C6D1EB8680E7E7E31 /* [CP] Check Pods Manifest.lock */,
 				3F3ED1E0218B6AE000906AF4 /* Sources */,
 				3F3ED1E1218B6AE000906AF4 /* Frameworks */,
 				3F3ED1E2218B6AE000906AF4 /* Resources */,
+				9C77D29DC699941C929D0D9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,20 +229,79 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F3ED1F2218B6AE200906AF4 /* LaunchScreen.storyboard in Resources */,
+				27A2D2D32191EE310040FC7D /* scripture.css in Resources */,
+				27A2D2D12191EE310040FC7D /* geo.21.sqlite in Resources */,
 				3F3ED1EF218B6AE200906AF4 /* Assets.xcassets in Resources */,
 				3F3ED1ED218B6AE100906AF4 /* Main.storyboard in Resources */,
+				27A2D2CD2191EE310040FC7D /* geocode.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C77D29DC699941C929D0D9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Split View Controller Demo/Pods-Split View Controller Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRDB.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Split View Controller Demo/Pods-Split View Controller Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0CC8D4C6D1EB8680E7E7E31 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Split View Controller Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F3ED1E0218B6AE000906AF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F3ED1EA218B6AE100906AF4 /* ViewController.swift in Sources */,
+				27A2D2CE2191EE310040FC7D /* String+Extensions.swift in Sources */,
+				27DAE7F621948E3500A4A2B8 /* ScripturesViewController.swift in Sources */,
+				27A2D2CF2191EE310040FC7D /* GeoPlace.swift in Sources */,
+				27A2D2D22191EE310040FC7D /* Book.swift in Sources */,
+				27A2D2D52191EE310040FC7D /* ScriptureRenderer.swift in Sources */,
+				3F3ED1FC218B6C3900906AF4 /* DetailViewController.swift in Sources */,
+				27A2D2DC2191F3520040FC7D /* BooksViewController.swift in Sources */,
+				27A2D2D42191EE310040FC7D /* GeoDatabase.swift in Sources */,
+				3F3ED1FA218B6B4000906AF4 /* VolumesViewController.swift in Sources */,
 				3F3ED1E8218B6AE100906AF4 /* AppDelegate.swift in Sources */,
+				27A2D2D02191EE310040FC7D /* Scripture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +445,7 @@
 		};
 		3F3ED1F7218B6AE200906AF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 109616A68AEFB242C87C00BD /* Pods-Split View Controller Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +464,7 @@
 		};
 		3F3ED1F8218B6AE200906AF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B2525810422E11AD6880F68 /* Pods-Split View Controller Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

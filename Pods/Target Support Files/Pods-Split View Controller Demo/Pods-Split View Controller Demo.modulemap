@@ -1,0 +1,6 @@
+framework module Pods_Split_View_Controller_Demo {
+  umbrella header "Pods-Split View Controller Demo-umbrella.h"
+
+  export *
+  module * { export * }
+}
