@@ -13,6 +13,7 @@ class BooksViewController : UITableViewController {
     private struct Storyboard {
         static let BookCellIdentifier = "BookCell"
         static let ShowScripturesSegueIdentifier = "ShowChapterContent"
+        static let ShowChaptersSegueIdentifier = "ShowChapterList"
     }
     
     // MARK - Properties
@@ -31,7 +32,13 @@ class BooksViewController : UITableViewController {
         if let scripVC = segue.destination as? ScripturesViewController {
             if let indexPath = sender as? IndexPath {
                 scripVC.bookId = books[indexPath.row].id
-                scripVC.chapter = 7
+                scripVC.chapter = books[indexPath.row].numChapters ?? 0
+            }
+        }
+        if let chapterVC = segue.destination as? ChaptersViewController {
+            if let indexPath = sender as? IndexPath {
+                chapterVC.bookId = books[indexPath.row].id
+                chapterVC.bookName = books[indexPath.row].fullName
             }
         }
     }
@@ -52,7 +59,11 @@ class BooksViewController : UITableViewController {
     
     // MARK - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: Storyboard.ShowScripturesSegueIdentifier, sender: indexPath)
+        if (books[indexPath.row].numChapters ?? 0 < 2) {
+            performSegue(withIdentifier: Storyboard.ShowScripturesSegueIdentifier, sender: indexPath)
+        } else {
+            performSegue(withIdentifier: Storyboard.ShowChaptersSegueIdentifier, sender: indexPath)
+        }
     }
     
     // MARK - Helpers

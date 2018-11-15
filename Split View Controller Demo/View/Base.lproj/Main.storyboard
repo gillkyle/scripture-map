@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="2087" y="-330"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Chapters View Controller-->
         <scene sceneID="Mkf-jm-gGd">
             <objects>
-                <tableViewController id="CLJ-g0-zUz" sceneMemberID="viewController">
+                <tableViewController id="CLJ-g0-zUz" customClass="ChaptersViewController" customModule="Split_View_Controller_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="npw-ao-tqV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,6 +252,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="4Lb-4U-xOZ"/>
-        <segue reference="adw-kx-383"/>
+        <segue reference="XGl-bW-OMM"/>
     </inferredMetricsTieBreakers>
 </document>

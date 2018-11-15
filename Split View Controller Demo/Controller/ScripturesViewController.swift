@@ -12,7 +12,7 @@ import WebKit
 class ScripturesViewController : UIViewController, WKNavigationDelegate {
     // MARK - Properties
     var bookId = 101
-    var chapter = 2
+    var chapter = 1
     
     // MARK - Private Properties
     private weak var mapViewController: MapViewController?
@@ -23,6 +23,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     // MARK - View Controller Lifecycle
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        print(bookId)
         
         configureDetailViewController()
     }
