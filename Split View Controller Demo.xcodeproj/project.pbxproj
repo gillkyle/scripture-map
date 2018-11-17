@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2795F6F1219DC07B00B5ECE8 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2795F6F0219DC07B00B5ECE8 /* ChaptersViewController.swift */; };
+		2795F6F3219DCC4A00B5ECE8 /* MapConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2795F6F2219DCC4A00B5ECE8 /* MapConfiguration.swift */; };
 		27A2D2CD2191EE310040FC7D /* geocode.js in Resources */ = {isa = PBXBuildFile; fileRef = 27A2D2C42191EE300040FC7D /* geocode.js */; };
 		27A2D2CE2191EE310040FC7D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2D2C52191EE300040FC7D /* String+Extensions.swift */; };
 		27A2D2CF2191EE310040FC7D /* GeoPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2D2C62191EE300040FC7D /* GeoPlace.swift */; };
@@ -35,6 +36,7 @@
 		1B2525810422E11AD6880F68 /* Pods-Split View Controller Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Split View Controller Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Split View Controller Demo/Pods-Split View Controller Demo.release.xcconfig"; sourceTree = "<group>"; };
 		1E6E6955FDDEB55CC5AC7B14 /* Pods_Split_View_Controller_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Split_View_Controller_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2795F6F0219DC07B00B5ECE8 /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
+		2795F6F2219DCC4A00B5ECE8 /* MapConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapConfiguration.swift; sourceTree = "<group>"; };
 		27A2D2C42191EE300040FC7D /* geocode.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = geocode.js; sourceTree = "<group>"; };
 		27A2D2C52191EE300040FC7D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		27A2D2C62191EE300040FC7D /* GeoPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoPlace.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				27F418FF219A820D00518CD2 /* Table */,
 				27A2D2CB2191EE310040FC7D /* GeoDatabase.swift */,
 				27A2D2CC2191EE310040FC7D /* ScriptureRenderer.swift */,
+				2795F6F2219DCC4A00B5ECE8 /* MapConfiguration.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 				27A2D2CF2191EE310040FC7D /* GeoPlace.swift in Sources */,
 				27A2D2D22191EE310040FC7D /* Book.swift in Sources */,
 				27A2D2D52191EE310040FC7D /* ScriptureRenderer.swift in Sources */,
+				2795F6F3219DCC4A00B5ECE8 /* MapConfiguration.swift in Sources */,
 				27A2D2DC2191F3520040FC7D /* BooksViewController.swift in Sources */,
 				27F41901219A846300518CD2 /* MapViewController.swift in Sources */,
 				27A2D2D42191EE310040FC7D /* GeoDatabase.swift in Sources */,

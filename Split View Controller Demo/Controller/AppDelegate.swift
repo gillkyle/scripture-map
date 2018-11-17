@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     }
     
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        MapConfiguration.sharedConfig.hasMapButton = true
         return true
     }
     
@@ -39,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
                 }
             }
         }
-        
+        MapConfiguration.sharedConfig.hasMapButton = false
         let storyboard = UIStoryboard(name: Storyboard.MainStoryboardName, bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: Storyboard.MapVCIdentifier)
     }

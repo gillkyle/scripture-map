@@ -167,7 +167,7 @@
             </objects>
             <point key="canvasLocation" x="2866" y="-331"/>
         </scene>
-        <!--Scriptures View Controller-->
+        <!--Title-->
         <scene sceneID="tXU-lN-s6r">
             <objects>
                 <viewController id="EZt-ji-he8" customClass="ScripturesViewController" customModule="Split_View_Controller_Demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,7 +193,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wt1-p1-ruA"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="3Wy-xI-b3I">
+                        <barButtonItem key="rightBarButtonItem" title="Show Map" id="Ldq-9F-a6F">
+                            <connections>
+                                <action selector="showMap:" destination="EZt-ji-he8" id="GYV-Al-Unx"/>
+                                <segue destination="vUC-kS-KYs" kind="show" id="Seq-vf-HYx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="mapButton" destination="Ldq-9F-a6F" id="Yqd-Zg-1ST"/>
                         <outlet property="webView" destination="emG-7d-VEq" id="qen-wZ-OCF"/>
                         <segue destination="KMg-Lj-LbZ" kind="showDetail" identifier="ShowMap" id="4Lb-4U-xOZ"/>
                     </connections>
@@ -252,6 +261,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="4Lb-4U-xOZ"/>
-        <segue reference="XGl-bW-OMM"/>
+        <segue reference="adw-kx-383"/>
+        <segue reference="Seq-vf-HYx"/>
     </inferredMetricsTieBreakers>
 </document>

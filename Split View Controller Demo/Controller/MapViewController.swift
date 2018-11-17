@@ -53,6 +53,15 @@ class MapViewController : UIViewController {
         mapView.showAnnotations(mapView.annotations, animated: true)
     }
     
+    // MARK - Actions
+    func showSelectedPin() {
+        print("show pin!!")
+        if let location = GeoDatabase.sharedGeoDatabase.geoPlaceForId(MapConfiguration.sharedConfig.selectedLocationId) {
+            print(location)
+        }
+        
+    }
+    
     // MARK - Map View Delegate
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         let view = mapView.dequeueReusableAnnotationView(withIdentifier: Constant.AnnotationReuseIdentifier, for: annotation)

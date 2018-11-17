@@ -10,6 +10,9 @@ import UIKit
 import WebKit
 
 class ScripturesViewController : UIViewController, WKNavigationDelegate {
+    // MARK - Constants
+//    let mapButton : UIBarButtonItem = UIBarButtonItem(title: "Show Map", style: UIBarButtonItem.Style.plain, target: self, action: "")
+    
     // MARK - Properties
     var bookId = 101
     var chapter = 1
@@ -19,17 +22,26 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     
     // MARK - Outlets
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var mapButton: UIBarButtonItem!
     
     // MARK - View Controller Lifecycle
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        print(bookId)
+        print(MapConfiguration.sharedConfig.hasMapButton)
         
+        if (MapConfiguration.sharedConfig.hasMapButton) {
+            mapButton.title = "Show Map"
+        } else {
+            mapButton.title = ""
+        }
+
         configureDetailViewController()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = ""
         
         configureDetailViewController()
         
@@ -37,6 +49,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         webView.navigationDelegate = self
         webView.loadHTMLString(html, baseURL: nil)
         print(geoplaces)
+        MapConfiguration.sharedConfig.pins = geoplaces
     }
     
     // MARK - Navigation delegate
@@ -48,7 +61,9 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
             
             if path.hasPrefix(baseUrl) {
                 if let geoplaceId = Int(path.substring(fromOffset: baseUrl.count)) {
-                    
+                    print(geoplaceId)
+                    MapConfiguration.sharedConfig.selectedLocationId = geoplaceId
+                    mapViewController?.showSelectedPin()
                 }
                 if mapViewController == nil {
                     
@@ -74,5 +89,4 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
             mapViewController = nil
         }
     }
-    
 }
