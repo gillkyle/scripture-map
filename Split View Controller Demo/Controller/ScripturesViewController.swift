@@ -27,7 +27,6 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
     // MARK - View Controller Lifecycle
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        print(MapConfiguration.sharedConfig.hasMapButton)
         
         if (MapConfiguration.sharedConfig.hasMapButton) {
             mapButton.title = "Show Map"
@@ -48,8 +47,10 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         let (html, geoplaces) = ScriptureRenderer.sharedRenderer.htmlForBookId(bookId, chapter: chapter)
         webView.navigationDelegate = self
         webView.loadHTMLString(html, baseURL: nil)
-        print(geoplaces)
         MapConfiguration.sharedConfig.pins = geoplaces
+        if let mapVC = mapViewController {
+            mapVC.addPins()
+        }
     }
     
     // MARK - Navigation delegate
@@ -63,7 +64,9 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
                 if let geoplaceId = Int(path.substring(fromOffset: baseUrl.count)) {
                     print(geoplaceId)
                     MapConfiguration.sharedConfig.selectedLocationId = geoplaceId
-                    mapViewController?.showSelectedPin()
+                    if let mapVC = mapViewController {
+                        mapVC.showSelectedPin()
+                    }
                 }
                 if mapViewController == nil {
                     

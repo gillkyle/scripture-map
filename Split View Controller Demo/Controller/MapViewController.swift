@@ -31,9 +31,9 @@ class MapViewController : UIViewController {
         
         let annotation = MKPointAnnotation()
         
-        annotation.coordinate = CLLocationCoordinate2DMake(40, -111)
-        annotation.title = "Tanner Building"
-        annotation.subtitle = "BYU Campus"
+        annotation.coordinate = CLLocationCoordinate2DMake(40.770473, -111.891802)
+        annotation.title = "Salt Lake Temple"
+        annotation.subtitle = "Temple Square"
         
         mapView.addAnnotation(annotation)
     }
@@ -41,11 +41,11 @@ class MapViewController : UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let camera = MKMapCamera(lookingAtCenter: CLLocationCoordinate2DMake(40, -111), fromEyeCoordinate: CLLocationCoordinate2DMake(40, -111), eyeAltitude: 500)
+        let camera = MKMapCamera(lookingAtCenter: CLLocationCoordinate2DMake(40.770473, -111.891802), fromEyeCoordinate: CLLocationCoordinate2DMake(40.770473, -111.891802), eyeAltitude: 500)
         
         mapView.setCamera(camera, animated: true)
         
-        let center = CLLocationCoordinate2DMake(40, -111)
+        let center = CLLocationCoordinate2DMake(40.770473, -111.891802)
         let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
         let viewRegion = MKCoordinateRegion(center: center, span: span)
         
@@ -55,11 +55,25 @@ class MapViewController : UIViewController {
     
     // MARK - Actions
     func showSelectedPin() {
-        print("show pin!!")
         if let location = GeoDatabase.sharedGeoDatabase.geoPlaceForId(MapConfiguration.sharedConfig.selectedLocationId) {
             print(location)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
+            annotation.title = location.placename
+            mapView.addAnnotation(annotation)
         }
         
+    }
+    func addPins() {
+        removeAnnotations()
+        for location in MapConfiguration.sharedConfig.pins {
+            print(location.placename)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
+            annotation.title = location.placename
+            mapView.addAnnotation(annotation)
+        }
+        setRegion()
     }
     
     // MARK - Map View Delegate
@@ -72,5 +86,19 @@ class MapViewController : UIViewController {
         }
         
         return view
+    }
+    
+    // MARK - Helpers
+    private func removeAnnotations() {
+        let allAnnotations = mapView.annotations
+        mapView.removeAnnotations(allAnnotations)
+    }
+    private func setRegion() {
+        let center = CLLocationCoordinate2DMake(MapConfiguration.sharedConfig.centerLatitude, MapConfiguration.sharedConfig.centerLongitude)
+        
+        let span = MKCoordinateSpan(latitudeDelta: MapConfiguration.sharedConfig.deltaLatitude, longitudeDelta: MapConfiguration.sharedConfig.deltaLongitude)
+        let viewRegion = MKCoordinateRegion(center: center, span: span)
+        mapView.setRegion(viewRegion, animated: true)
+        mapView.showAnnotations(mapView.annotations, animated: true)
     }
 }
