@@ -11,7 +11,9 @@ import WebKit
 
 class ScripturesViewController : UIViewController, WKNavigationDelegate {
     // MARK - Constants
-//    let mapButton : UIBarButtonItem = UIBarButtonItem(title: "Show Map", style: UIBarButtonItem.Style.plain, target: self, action: "")
+    private struct Storyboard {
+        static let ShowMapSegue = "ShowMap"
+    }
     
     // MARK - Properties
     var bookId = 101
@@ -63,15 +65,14 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
             if path.hasPrefix(baseUrl) {
                 if let geoplaceId = Int(path.substring(fromOffset: baseUrl.count)) {
                     print(geoplaceId)
+                    MapConfiguration.sharedConfig.selected = true
                     MapConfiguration.sharedConfig.selectedLocationId = geoplaceId
-                    if let mapVC = mapViewController {
-                        mapVC.showSelectedPin()
-                    }
                 }
                 if mapViewController == nil {
-                    
+                    performSegue(withIdentifier: Storyboard.ShowMapSegue, sender: self)
                 } else {
-                    
+                    print("already had map view visible")
+                    mapViewController?.showSelectedPin()
                 }
                 
                 decisionHandler(.cancel)

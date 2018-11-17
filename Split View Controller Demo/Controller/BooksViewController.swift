@@ -31,6 +31,7 @@ class BooksViewController : UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scripVC = segue.destination as? ScripturesViewController {
             if let indexPath = sender as? IndexPath {
+                MapConfiguration.sharedConfig.selected = false
                 scripVC.bookId = books[indexPath.row].id
                 scripVC.chapter = books[indexPath.row].numChapters ?? 0
             }

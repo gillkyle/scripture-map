@@ -261,7 +261,7 @@
         <!--Map-->
         <scene sceneID="wVE-v8-YFl">
             <objects>
-                <viewController id="19c-Cg-uDZ" customClass="MapViewController" customModule="Split_View_Controller_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Map" id="19c-Cg-uDZ" customClass="MapViewController" customModule="Split_View_Controller_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SFf-D5-8FE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

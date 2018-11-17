@@ -43,14 +43,9 @@ class MapViewController : UIViewController {
     
     // MARK - Actions
     func showSelectedPin() {
-        if let location = GeoDatabase.sharedGeoDatabase.geoPlaceForId(MapConfiguration.sharedConfig.selectedLocationId) {
-            print(location)
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
-            annotation.title = location.placename
-            mapView.addAnnotation(annotation)
-        }
-        
+        print("selected pin")
+
+        setRegion()
     }
     func addPins() {
         removeAnnotations()
@@ -82,11 +77,31 @@ class MapViewController : UIViewController {
         mapView.removeAnnotations(allAnnotations)
     }
     private func setRegion() {
-        let center = CLLocationCoordinate2DMake(MapConfiguration.sharedConfig.centerLatitude, MapConfiguration.sharedConfig.centerLongitude)
+        var center = CLLocationCoordinate2DMake(MapConfiguration.sharedConfig.centerLatitude, MapConfiguration.sharedConfig.centerLongitude)
+        print(MapConfiguration.sharedConfig.selected)
+        print(MapConfiguration.sharedConfig.selectedLocationId)
+        if (MapConfiguration.sharedConfig.selected) {
+            let selectedLocation = GeoDatabase.sharedGeoDatabase.geoPlaceForId(MapConfiguration.sharedConfig.selectedLocationId)
+            if let location = selectedLocation {
+                center = CLLocationCoordinate2DMake(location.latitude, location.longitude)
+            }
+        }
         
         let span = MKCoordinateSpan(latitudeDelta: MapConfiguration.sharedConfig.deltaLatitude, longitudeDelta: MapConfiguration.sharedConfig.deltaLongitude)
         let viewRegion = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(viewRegion, animated: true)
         mapView.showAnnotations(mapView.annotations, animated: true)
+        
+        setTitle()
+    }
+    private func setTitle() {
+        if(MapConfiguration.sharedConfig.selected) {
+            let selectedLocation = GeoDatabase.sharedGeoDatabase.geoPlaceForId(MapConfiguration.sharedConfig.selectedLocationId)
+            if let location = selectedLocation {
+                title = location.placename
+            }
+        } else {
+            title = "Important Places"
+        }
     }
 }

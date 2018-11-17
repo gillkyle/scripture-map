@@ -53,6 +53,7 @@ class ChaptersViewController : UITableViewController {
     
     // MARK - Table view delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        MapConfiguration.sharedConfig.selected = false
         performSegue(withIdentifier: Storyboard.ShowScripturesSegueIdentifier, sender: indexPath)
     }
     
