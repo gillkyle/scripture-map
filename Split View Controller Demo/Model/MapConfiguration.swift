@@ -33,8 +33,8 @@ class MapConfiguration {
     }
     var selectedLocationId = 0
     var selected = false
-    var centerLatitude = 0.0
-    var centerLongitude = 0.0
-    var deltaLongitude = 0.0
-    var deltaLatitude = 0.0
+    var centerLatitude = 40.770473
+    var centerLongitude = -111.891802
+    var deltaLongitude = 0.2
+    var deltaLatitude = 0.2
 }

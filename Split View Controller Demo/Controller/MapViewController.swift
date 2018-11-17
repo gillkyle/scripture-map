@@ -28,29 +28,17 @@ class MapViewController : UIViewController {
         }
         
         mapView.register(MKPinAnnotationView.self, forAnnotationViewWithReuseIdentifier: Constant.AnnotationReuseIdentifier)
-        
-        let annotation = MKPointAnnotation()
-        
-        annotation.coordinate = CLLocationCoordinate2DMake(40.770473, -111.891802)
-        annotation.title = "Salt Lake Temple"
-        annotation.subtitle = "Temple Square"
-        
-        mapView.addAnnotation(annotation)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let camera = MKMapCamera(lookingAtCenter: CLLocationCoordinate2DMake(40.770473, -111.891802), fromEyeCoordinate: CLLocationCoordinate2DMake(40.770473, -111.891802), eyeAltitude: 500)
+        let center = CLLocationCoordinate2DMake(MapConfiguration.sharedConfig.centerLatitude, MapConfiguration.sharedConfig.centerLongitude)
+        let camera = MKMapCamera(lookingAtCenter: center, fromEyeCoordinate: center, eyeAltitude: 500)
         
         mapView.setCamera(camera, animated: true)
         
-        let center = CLLocationCoordinate2DMake(40.770473, -111.891802)
-        let span = MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02)
-        let viewRegion = MKCoordinateRegion(center: center, span: span)
-        
-        mapView.setRegion(viewRegion, animated: true)
-        mapView.showAnnotations(mapView.annotations, animated: true)
+        addPins()
     }
     
     // MARK - Actions
