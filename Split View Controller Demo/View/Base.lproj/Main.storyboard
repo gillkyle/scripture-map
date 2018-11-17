@@ -197,7 +197,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Show Map" id="Ldq-9F-a6F">
                             <connections>
                                 <action selector="showMap:" destination="EZt-ji-he8" id="GYV-Al-Unx"/>
-                                <segue destination="vUC-kS-KYs" kind="show" id="Seq-vf-HYx"/>
+                                <segue destination="KMg-Lj-LbZ" kind="showDetail" id="JC8-jX-7kv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -258,10 +258,42 @@
             </objects>
             <point key="canvasLocation" x="1687" y="1408"/>
         </scene>
+        <!--Map-->
+        <scene sceneID="wVE-v8-YFl">
+            <objects>
+                <viewController id="19c-Cg-uDZ" customClass="MapViewController" customModule="Split_View_Controller_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SFf-D5-8FE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="satelliteFlyover" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRt-MN-LUb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <connections>
+                                    <outlet property="delegate" destination="19c-Cg-uDZ" id="Ggi-gM-PRE"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rRt-MN-LUb" firstAttribute="top" secondItem="57O-W5-gYI" secondAttribute="top" id="8BE-xh-dui"/>
+                            <constraint firstItem="57O-W5-gYI" firstAttribute="trailing" secondItem="rRt-MN-LUb" secondAttribute="trailing" id="Lp9-Or-QWQ"/>
+                            <constraint firstItem="rRt-MN-LUb" firstAttribute="leading" secondItem="57O-W5-gYI" secondAttribute="leading" id="Rrs-Ko-Ipg"/>
+                            <constraint firstItem="57O-W5-gYI" firstAttribute="bottom" secondItem="rRt-MN-LUb" secondAttribute="bottom" id="W2M-hP-0Kz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="57O-W5-gYI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map" id="MhE-Jw-5iE"/>
+                    <connections>
+                        <outlet property="mapView" destination="rRt-MN-LUb" id="Zva-Zq-YhD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIG-lg-Vev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2481" y="1407"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="4Lb-4U-xOZ"/>
         <segue reference="adw-kx-383"/>
-        <segue reference="Seq-vf-HYx"/>
     </inferredMetricsTieBreakers>
 </document>
