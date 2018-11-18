@@ -32,6 +32,7 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         
         if (MapConfiguration.sharedConfig.hasMapButton) {
             mapButton.title = "Show Map"
+            MapConfiguration.sharedConfig.selected = false
         } else {
             mapButton.title = ""
         }
@@ -52,6 +53,12 @@ class ScripturesViewController : UIViewController, WKNavigationDelegate {
         MapConfiguration.sharedConfig.pins = geoplaces
         if let mapVC = mapViewController {
             mapVC.addPins()
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if (MapConfiguration.sharedConfig.hasMapButton) {
+            MapConfiguration.sharedConfig.selected = false
         }
     }
     

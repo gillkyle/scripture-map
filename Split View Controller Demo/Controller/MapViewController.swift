@@ -44,13 +44,11 @@ class MapViewController : UIViewController {
     // MARK - Actions
     func showSelectedPin() {
         print("selected pin")
-
         setRegion()
     }
     func addPins() {
         removeAnnotations()
         for location in MapConfiguration.sharedConfig.pins {
-            print(location.placename)
             let annotation = MKPointAnnotation()
             annotation.coordinate = CLLocationCoordinate2DMake(location.latitude, location.longitude)
             annotation.title = location.placename
@@ -79,7 +77,6 @@ class MapViewController : UIViewController {
     private func setRegion() {
         var center = CLLocationCoordinate2DMake(MapConfiguration.sharedConfig.centerLatitude, MapConfiguration.sharedConfig.centerLongitude)
         print(MapConfiguration.sharedConfig.selected)
-        print(MapConfiguration.sharedConfig.selectedLocationId)
         if (MapConfiguration.sharedConfig.selected) {
             let selectedLocation = GeoDatabase.sharedGeoDatabase.geoPlaceForId(MapConfiguration.sharedConfig.selectedLocationId)
             if let location = selectedLocation {
@@ -89,8 +86,16 @@ class MapViewController : UIViewController {
         
         let span = MKCoordinateSpan(latitudeDelta: MapConfiguration.sharedConfig.deltaLatitude, longitudeDelta: MapConfiguration.sharedConfig.deltaLongitude)
         let viewRegion = MKCoordinateRegion(center: center, span: span)
-        mapView.setRegion(viewRegion, animated: true)
-        mapView.showAnnotations(mapView.annotations, animated: true)
+        print(viewRegion)
+        if (MapConfiguration.sharedConfig.selected) {
+            let selectedLocation = GeoDatabase.sharedGeoDatabase.geoPlaceForId(MapConfiguration.sharedConfig.selectedLocationId)
+            if let location = selectedLocation {
+                mapView.setCenter(CLLocationCoordinate2DMake(location.latitude, location.longitude), animated: true)
+            }
+        } else {
+            mapView.setRegion(viewRegion, animated: true)
+            mapView.showAnnotations(mapView.annotations, animated: true)
+        }
         
         setTitle()
     }
