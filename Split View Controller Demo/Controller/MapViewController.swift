@@ -91,6 +91,8 @@ class MapViewController : UIViewController {
             let selectedLocation = GeoDatabase.sharedGeoDatabase.geoPlaceForId(MapConfiguration.sharedConfig.selectedLocationId)
             if let location = selectedLocation {
                 mapView.setCenter(CLLocationCoordinate2DMake(location.latitude, location.longitude), animated: true)
+                let camera = MKMapCamera(lookingAtCenter: CLLocationCoordinate2DMake(location.viewLatitude, location.viewLongitude), fromEyeCoordinate: CLLocationCoordinate2DMake(location.viewLatitude, location.longitude), eyeAltitude: location.viewAltitude)
+                mapView.setCamera(camera, animated: true)
             }
         } else {
             mapView.setRegion(viewRegion, animated: true)
